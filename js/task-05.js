@@ -4,8 +4,9 @@ const greetingsRefs = document.querySelector('#name-output')
 inputRefs.addEventListener('input', rewritingGreeting)
 
 function rewritingGreeting(event) {
-greetingsRefs.textContent = event.currentTarget.value
-    console.log();  
+    greetingsRefs.textContent = event.currentTarget.value
+    if (greetingsRefs.textContent === "")
+        greetingsRefs.textContent = 'Anonymous!'
     
 }
 

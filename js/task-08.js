@@ -12,11 +12,11 @@ function collectDataFromForm(ev) {
     const FormElEmail = FormElements.email.value
     const FormElPasswod = FormElements.password.value
     
-    if (FormElEmail || FormElPasswod !== '') {
+    if (FormElEmail && FormElPasswod !== '') {
         dataObj.email = FormElEmail
         dataObj.password = FormElPasswod
-    } else
-    return alert('заполните все поля')
+    } else {
+     alert('заполните все поля')}
     
     
     console.log(dataObj);
