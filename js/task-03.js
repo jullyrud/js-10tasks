@@ -12,3 +12,15 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+const makeImageMarkup = image => {
+  return `<li><img src="${image.url}" alt="${image.alt}" height = 300px></li>`
+}
+
+const makeListMarkur = images.map(makeImageMarkup).join('')
+const imagesList = document.querySelector('.gallery')
+
+imagesList.insertAdjacentHTML('beforeend', makeListMarkur)
+imagesList.style.display = "flex"
+
+ console.log(imagesList); 
